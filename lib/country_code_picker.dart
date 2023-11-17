@@ -177,6 +177,11 @@ class CountryCodePickerState extends State<CountryCodePicker> {
     } else {
       internalWidget = TextButton(
         onPressed: widget.enabled ? showCountryCodePickerDialog : null,
+        style: TextButton.styleFrom(
+            padding: EdgeInsets.zero,
+            minimumSize: Size.zero,
+            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+        ),
         child: Padding(
           padding: widget.padding,
           child: Flex(
