@@ -212,6 +212,8 @@ class CountryCodePickerState extends State<CountryCodePicker> {
               if (!widget.hideMainText)
                 Flexible(
                   fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,
+                  child: Padding(
+                  padding:EdgeInsets.fromLTRB(10, 0, 0, 0),
                   child: Text(
                     widget.showOnlyCountryWhenClosed
                         ? selectedItem!.toCountryStringOnly()
@@ -220,7 +222,7 @@ class CountryCodePickerState extends State<CountryCodePicker> {
                         Theme.of(context).textTheme.labelLarge,
                     overflow: widget.textOverflow,
                   ),
-                ),
+                )),
               if (widget.showDropDownButton)
                 Flexible(
                   flex: widget.alignLeft ? 0 : 1,
